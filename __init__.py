@@ -8,7 +8,7 @@ class RC4:
 
     def encode(self, source):
         self.prepare()
-        source = bytearray(source)
+        source = bytearray(source, 'ascii')
 
         return [i ^ self.prga() for i in source]
 
